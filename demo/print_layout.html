@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BandOps PDF</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @page { size: 1920px 1080px; margin: 0; }
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; margin: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        .slide { width: 1920px; height: 1080px; page-break-after: always; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 4rem; box-sizing: border-box; position: relative; }
+        .glass-panel { background: rgba(30, 41, 59, 0.8); border: 2px solid rgba(148, 163, 184, 0.3); border-radius: 2rem; padding: 4rem 6rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); max-width: 1400px; width: 100%; z-index: 10;}
+        .accent-amber { color: #f59e0b; }
+        .accent-cyan { color: #06b6d4; }
+        .accent-red { color: #ef4444; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .data-stream { position: absolute; left: 3rem; top: 3rem; text-align: left; opacity: 0.5; font-size: 1.2rem; }
+        ul.text-left li { margin-bottom: 1.5rem; border-left: 4px solid #06b6d4; padding-left: 1.5rem; }
+        .bg-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%); z-index: 1; }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Cover -->
+    <div class="slide">
+        <div class="bg-pattern"></div>
+        <div class="data-stream font-mono accent-cyan">SYS_INIT: OK<br>SEC_HANDSHAKE: VERIFIED</div>
+        <div class="glass-panel">
+            <h1 class="text-9xl font-extrabold mb-8 tracking-tighter" style="font-size: 8rem;">Band<span class="accent-amber">Ops</span></h1>
+            <p class="text-4xl text-slate-300 font-light mb-12">Multi-Agent Command Rooms for Crisis Operations</p>
+            <div class="inline-block px-8 py-4 border-4 border-red-500 text-red-500 rounded-xl font-mono text-3xl">STATUS: SYSTEM ONLINE</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Hook -->
+    <div class="slide">
+        <div class="bg-pattern" style="background-image: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.1) 0%, transparent 50%);"></div>
+        <div class="glass-panel border-red-500/30 bg-red-900/10">
+            <div class="font-mono accent-red text-2xl mb-6 tracking-widest">CRITICAL_ALERT</div>
+            <h2 class="text-7xl font-bold mb-12">The <span class="accent-red">$15,000/Minute</span> Problem</h2>
+            <div class="text-4xl text-slate-300 space-y-8 text-left max-w-5xl mx-auto font-light">
+                <p>> A grounded plane (AOG) costs airlines $15,000 per minute.</p>
+                <p>> The clock starts immediately.</p>
+                <p>> Every second wasted on logistics is thousands of dollars burned.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: The Problem -->
+    <div class="slide">
+        <div class="glass-panel">
+            <div class="font-mono accent-red text-2xl mb-6 tracking-widest">FAILURE_MODES</div>
+            <h2 class="text-6xl font-bold mb-12">The Problem: Siloed Crisis Ops</h2>
+            <ul class="text-3xl text-slate-300 text-left max-w-5xl mx-auto list-none space-y-8 font-light">
+                <li><span class="accent-amber font-bold">Data Fragmentation:</span> Mechanics, Logistics, and Ops use different systems.</li>
+                <li><span class="accent-amber font-bold">Latency:</span> Communication relies on phone calls and emails.</li>
+                <li><span class="accent-amber font-bold">Compliance Risk:</span> FAA regulations are often manually checked.</li>
+                <li><span class="accent-amber font-bold">Cognitive Overload:</span> Humans panic under immense financial pressure.</li>
+                <li><span class="accent-amber font-bold">Zero Traceability:</span> Post-crisis audits are a nightmare.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 4: Current Reality -->
+    <div class="slide">
+        <div class="glass-panel">
+            <div class="font-mono accent-amber text-2xl mb-6 tracking-widest">BOTTLENECK_DETECTED</div>
+            <h2 class="text-6xl font-bold mb-10">Current Reality: Trapped Dispatchers</h2>
+            <p class="text-4xl mb-12 text-slate-300 font-light">The human dispatcher is the bottleneck, trapped between:</p>
+            <div class="grid grid-cols-2 gap-8 text-3xl text-left max-w-5xl mx-auto text-slate-300">
+                <div class="bg-slate-800 p-6 rounded-xl border-l-8 border-slate-600">Maintenance APIs</div>
+                <div class="bg-slate-800 p-6 rounded-xl border-l-8 border-slate-600">Supply Chain Databases</div>
+                <div class="bg-slate-800 p-6 rounded-xl border-l-8 border-slate-600">Crew Scheduling Systems</div>
+                <div class="bg-slate-800 p-6 rounded-xl border-l-8 border-slate-600">Weather & Air Traffic Control</div>
+                <div class="bg-slate-800 p-6 rounded-xl border-l-8 border-red-500 col-span-2 text-center font-bold">FAA Compliance Manuals</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Introducing BandOps -->
+    <div class="slide">
+        <div class="bg-pattern"></div>
+        <div class="glass-panel border-cyan-500/50 shadow-[0_0_80px_-12px_rgba(6,182,212,0.2)]">
+            <div class="font-mono accent-cyan text-2xl mb-6 tracking-widest">SOLUTION_INITIALIZED</div>
+            <h2 class="text-7xl font-bold mb-12 accent-cyan">Introducing BandOps</h2>
+            <ul class="text-4xl text-slate-300 text-left max-w-5xl mx-auto list-none space-y-8 font-light">
+                <li>A secure, cyber-physical Multi-Agent Command Center.</li>
+                <li>Replaces siloed human panic with an orchestrated swarm of AI agents.</li>
+                <li>Built for high-stakes, highly regulated enterprise environments.</li>
+                <li class="border-amber-500 text-white font-bold text-5xl mt-12 pt-8 border-t-2">Powered entirely by the Band API Mesh.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 6: Why Band -->
+    <div class="slide">
+        <div class="glass-panel">
+            <div class="font-mono accent-amber text-2xl mb-6 tracking-widest">ARCHITECTURE_RATIONALE</div>
+            <h2 class="text-7xl font-bold mb-16">Why <span class="accent-amber">Band</span>?</h2>
+            <div class="grid grid-cols-2 gap-12 text-left">
+                <div class="p-10 bg-slate-800 rounded-2xl border-l-8 border-slate-500">
+                    <h3 class="text-4xl font-bold mb-6 text-slate-400">Without Band</h3>
+                    <p class="text-3xl text-slate-400 font-light leading-relaxed">Agents exist in isolation. Custom websockets and auth for 6 agents takes months of fragile engineering.</p>
+                </div>
+                <div class="p-10 bg-amber-900/20 rounded-2xl border-l-8 border-amber-500">
+                    <h3 class="text-4xl font-bold mb-6 accent-amber">With Band API</h3>
+                    <p class="text-3xl text-slate-200 font-light leading-relaxed">A persistent, zero-trust mesh. Identity verification, cross-framework state sync, and immutable logging out of the box.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Architecture -->
+    <div class="slide">
+        <div class="glass-panel">
+            <div class="font-mono accent-cyan text-2xl mb-6 tracking-widest">SIGNAL_FLOW</div>
+            <h2 class="text-6xl font-bold mb-12">Architecture: 7-Stage Signal Flow</h2>
+            <div class="flex flex-col space-y-6 text-4xl text-slate-300 max-w-3xl mx-auto text-left font-mono">
+                <div>[01] Event Trigger (AOG Detected)</div>
+                <div>[02] Mechanic Diagnosis</div>
+                <div>[03] Supply Chain Sourcing</div>
+                <div>[04] Flight Ops Delay Calculation</div>
+                <div class="accent-red">[05] FAA Adversarial Audit</div>
+                <div>[06] Commander Synthesis</div>
+                <div class="accent-cyan">[07] Immutable Ledger Write</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Meet the Agents -->
+    <div class="slide">
+        <div class="glass-panel">
+            <div class="font-mono accent-amber text-2xl mb-6 tracking-widest">AGENT_ROSTER</div>
+            <h2 class="text-6xl font-bold mb-12">Meet the Agents</h2>
+            <div class="grid grid-cols-2 gap-8 text-left max-w-6xl mx-auto text-2xl">
+                <div class="bg-slate-800 p-8 rounded-xl border-l-8 border-cyan-500"><span class="font-bold text-white text-3xl block mb-2">MECHANIC</span> Diagnoses faults based on MEL.</div>
+                <div class="bg-slate-800 p-8 rounded-xl border-l-8 border-cyan-500"><span class="font-bold text-white text-3xl block mb-2">SUPPLY CHAIN</span> Sources parts globally.</div>
+                <div class="bg-slate-800 p-8 rounded-xl border-l-8 border-cyan-500"><span class="font-bold text-white text-3xl block mb-2">FLIGHT OPS</span> Calculates delay costs and swaps.</div>
+                <div class="bg-slate-800 p-8 rounded-xl border-l-8 border-cyan-500"><span class="font-bold text-white text-3xl block mb-2">CREW SCHEDULER</span> Locates reserve crews.</div>
+                <div class="bg-slate-800 p-8 rounded-xl border-l-8 border-amber-500"><span class="font-bold text-white text-3xl block mb-2">COMMANDER</span> Synthesizes the debate.</div>
+                <div class="bg-red-900/30 p-8 rounded-xl border-l-8 border-red-500"><span class="font-bold text-red-400 text-3xl block mb-2">FAA COMPLIANCE</span> Adversarial auditor with veto power.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Agent Dynamics -->
+    <div class="slide">
+        <div class="glass-panel">
+            <div class="font-mono accent-cyan text-2xl mb-6 tracking-widest">LIVE_TRANSCRIPT</div>
+            <h2 class="text-6xl font-bold mb-10">Agent Dynamics: The Band Room</h2>
+            <div class="bg-black/80 p-10 font-mono text-left text-3xl space-y-6 rounded-2xl border border-slate-700 max-w-5xl mx-auto leading-relaxed">
+                <div><span class="text-blue-400">[MECHANIC]:</span> Fault confirmed. Need part #X789.</div>
+                <div><span class="text-green-400">[LOGISTICS]:</span> Found in Seattle. Shipping takes 4 hours.</div>
+                <div><span class="text-purple-400">[FLIGHT OPS]:</span> 4 hours breaches the delay threshold.</div>
+                <div><span class="text-red-500">[FAA COMPLIANCE]:</span> WARNING - Proposed crew will violate max duty time.</div>
+            </div>
+            <p class="text-3xl text-slate-300 mt-12 font-light italic">Agents debate collaboratively, resolving conflicts in milliseconds.</p>
+        </div>
+    </div>
+
+    <!-- Slide 10: HITL -->
+    <div class="slide">
+        <div class="glass-panel">
+            <div class="font-mono accent-amber text-2xl mb-6 tracking-widest">SAFETY_PROTOCOLS</div>
+            <h2 class="text-7xl font-bold mb-16">Human-In-The-Loop (HITL)</h2>
+            <div class="grid grid-cols-3 gap-10 text-left max-w-6xl mx-auto">
+                <div class="p-8 bg-slate-800 rounded-2xl">
+                    <h3 class="text-3xl font-bold accent-cyan mb-4">PILLAR 1:<br>AI Prepares</h3>
+                    <p class="text-2xl text-slate-300 font-light">The heavy lifting of data synthesis is automated in milliseconds.</p>
+                </div>
+                <div class="p-8 bg-slate-800 rounded-2xl border-2 border-amber-500/50">
+                    <h3 class="text-3xl font-bold accent-amber mb-4">PILLAR 2:<br>Humans Approve</h3>
+                    <p class="text-2xl text-slate-300 font-light">Critical operational decisions are never fully autonomous.</p>
+                </div>
+                <div class="p-8 bg-slate-800 rounded-2xl">
+                    <h3 class="text-3xl font-bold text-green-400 mb-4">PILLAR 3:<br>Trust Compounds</h3>
+                    <p class="text-2xl text-slate-300 font-light">Human operators learn to trust the swarm's accuracy over time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 11: Audit Trail -->
+    <div class="slide">
+        <div class="glass-panel border-cyan-500/30">
+            <div class="font-mono accent-cyan text-2xl mb-6 tracking-widest">COMPLIANCE_LEDGER</div>
+            <h2 class="text-7xl font-bold mb-12">Immutable Audit Trail</h2>
+            <ul class="text-4xl text-slate-300 text-left max-w-5xl mx-auto list-none space-y-8 font-light">
+                <li>Every message, tool call, and decision is cryptographically signed.</li>
+                <li>Logged to a write-only database structure.</li>
+                <li>Provides flawless traceability for FAA regulators.</li>
+                <li class="border-red-500 text-white font-bold text-5xl pt-4">Zero black boxes.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Slide 12: Differentiators -->
+    <div class="slide">
+        <div class="glass-panel">
+            <div class="font-mono accent-cyan text-2xl mb-6 tracking-widest">COMPETITIVE_ANALYSIS</div>
+            <h2 class="text-7xl font-bold mb-16">Differentiators</h2>
+            <div class="grid grid-cols-2 gap-12 text-left">
+                <div class="p-10 bg-slate-800 rounded-2xl border-l-8 border-slate-500">
+                    <h3 class="text-4xl font-bold mb-6 text-slate-400">Most AI Projects</h3>
+                    <p class="text-3xl text-slate-400 font-light leading-relaxed">Toy chatbots, single framework, zero compliance, total black box operation.</p>
+                </div>
+                <div class="p-10 bg-cyan-900/20 rounded-2xl border-l-8 border-cyan-500">
+                    <h3 class="text-4xl font-bold mb-6 accent-cyan">BandOps</h3>
+                    <p class="text-3xl text-slate-200 font-light leading-relaxed">High stakes, cross-framework via Band API, strict compliance, completely auditable.</p>
+                </div>
+            </div>
+            <p class="text-4xl font-bold accent-amber mt-12">We built a true enterprise application, not a wrapper.</p>
+        </div>
+    </div>
+
+    <!-- Slide 13: Closing -->
+    <div class="slide">
+        <div class="bg-pattern"></div>
+        <div class="glass-panel border-cyan-500/50 shadow-[0_0_100px_-12px_rgba(6,182,212,0.4)]">
+            <h1 class="text-9xl font-extrabold mb-8 tracking-tighter" style="font-size: 8rem;">Band<span class="accent-amber">Ops</span></h1>
+            <p class="text-5xl text-slate-300 font-light tracking-wide mb-12">The Future of Crisis Operations.</p>
+            <div class="inline-block px-8 py-4 border-4 border-red-500 text-red-500 rounded-xl font-mono text-3xl animate-pulse">END OF TRANSMISSION</div>
+        </div>
+    </div>
+
+</body>
+</html>
