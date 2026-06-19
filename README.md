@@ -1,41 +1,116 @@
-# ⚡ BandOps: Multi-Agent Command Rooms for Regulated Crisis Operations
+<div align="center">
+  <img src="assets/hero_banner.png" alt="BandOps Hero Banner" width="800">
+  
+  <h1>BandOps</h1>
+  <p><b>Multi-Agent Command Rooms for Regulated Crisis Operations.</b></p>
+  <p>A Band-powered platform that orchestrates adversarial AI agents in high-stakes enterprise crises.</p>
 
-**The ultimate submission for Track 3: Regulated & High-Stakes Workflows**
+  [![Band of Agents Hackathon](https://img.shields.io/badge/Submission-Band_of_Agents_Hackathon-005a9c.svg)](#)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  [![Band SDK](https://img.shields.io/badge/Powered_by-Band_SDK-black.svg)](#)
+</div>
 
-BandOps is an enterprise orchestration platform for regulated crisis operations. Whether it's a hospital bed shortage, a supply chain collapse, or an energy grid failure, BandOps spins up an adversarial, multi-agent command room to resolve the crisis.
+<br/>
 
-To prove the platform, we chose one of the most expensive, high-stakes logistics nightmares on earth as our **Showcase Demo: Aircraft On Ground (AOG).**
+> **"Band is the interoperability layer."**
 
-A single grounded aircraft costs up to **$15,000 every minute**. Today, five disconnected teams scramble to save the flight. BandOps gives them one AI command room where the AI prepares the optimal resolution, while the licensed human dispatcher remains in ultimate control.
+BandOps transforms chaotic, multi-billion dollar enterprise crises into orchestrated, compliant resolutions. By leveraging the **Band API**, we bring specialized, adversarial AI agents into a single "War Room" alongside human commanders, forging a secure, immutable, and cross-framework collaboration mesh.
 
-## ⚔️ Adversarial Negotiation (The Core Differentiator)
-This is not a simple prompt chain. Our agents have **conflicting goals** and must negotiate a solution via the Band interaction bus:
-- ✈️ **Flight Ops Agent:** Wants to dispatch the aircraft as fast as possible to minimize $15k/min delay costs.
-- 🛡️ **FAA Compliance Agent:** Acts as an adversarial gatekeeper. It will ruthlessly block any proposal from Flight Ops that violates safety minimums.
+---
 
-## 🤯 Thinking Beyond: The Hackathon Winning Features
-1. **True Cross-Framework Orchestration:** Why multiple frameworks? Because Band isn't just another agent framework; it's the **interoperability layer**. Enterprises already have silos built with different stacks. We prove heterogeneous agents (LangChain, CrewAI, AutoGen, Pydantic AI, LlamaIndex) can cooperate without rewrites.
-2. **Cryptographic Ledger (SHA-256 Hash Chaining):** Track 3 demands traceability. Every single ping, negotiation tactic, and final agreement is not just logged, but **cryptographically hashed** and chained to the previous message. The human dispatcher receives an immutable ledger of the decision.
-3. **Chaos Engineering Mode:** The real world isn't static. Toggle "Inject Chaos" to simulate a severe weather anomaly (Ground Stop at ATL) *during* the active negotiation. Watch the swarm instantly pivot. This proves the system is dynamic, not scripted.
-4. **Live Audio Synthesis:** For the ultimate command room experience, the UI synthesizes the agent logs into live audio, reading out the negotiation like an Air Traffic Control radio.
+## 🚨 The Problem: Aircraft on Ground (AOG)
+When a commercial aircraft is grounded due to a mechanical failure (AOG), **it costs airlines $15,000 per minute**.
+Resolving an AOG crisis requires immediate coordination between Engineering, Supply Chain, Flight Ops, and the FAA. Today, these departments exist in siloed systems, communicating via fragmented phone calls and emails. The result? Hours of delays, massive financial losses, and compliance risks.
 
-## The Showcase Swarm (Aviation Demo)
-1. **Line Mechanic Agent (LangChain):** Diagnoses the fault.
-2. **Supply Chain Agent (CrewAI):** Locates the nearest replacement part.
-3. **Flight Ops Agent (AutoGen):** Calculates the cost of delay vs. swapping the aircraft.
-4. **FAA Compliance Agent (Pydantic AI):** Ensures safety compliance.
-5. **Crew Scheduler Agent (LlamaIndex):** Checks legal duty hours.
+---
 
-They debate in milliseconds, arriving at a mathematically optimal, 100% FAA-compliant resolution for the human dispatcher to sign off.
+## 💡 The Solution: BandOps
+BandOps is a secure **Multi-Agent Command Center**. We replace siloed human panic with an orchestrated swarm of specialized AI agents. They analyze the fault, locate parts, check regulations, and formulate a compliant resolution in seconds. 
 
-## 🏆 How we meet the Judging Criteria
-* **Application of Technology:** Band is the core interaction bus bridging siloed enterprise frameworks.
-* **Business Value:** A generalized pattern for crisis ops, showcased on a $50M/year aviation problem.
-* **Originality:** A true "Blue Ocean" submission integrating Chaos Engineering and Cryptographic Ledgers.
-* **Presentation:** Includes a high-fidelity "Radar" UI built with React/Tailwind/Framer Motion and Web Speech Synthesis.
+**Why Band?**
+Band is the essential interoperability layer. BandOps relies on Band to provide a persistent, secure room where agents (who may be built in LangGraph, CrewAI, or raw Python) can seamlessly communicate, debate, and reach consensus while a human oversees the process. Band ensures that every message, thought, and tool call is authenticated and logged.
 
-## How to run
+---
+
+## 🏗 Architecture
+BandOps uses a modern, real-time stack:
+- **Frontend:** React + Vite + TailwindCSS (Glassmorphism, Cyber-Physical UI)
+- **Backend:** FastAPI + Python
+- **Orchestration:** Band Python SDK (`band-sdk`)
+- **Agents:** 6 distinct personas connected via Band's mesh.
+
+<div align="center">
+  <img src="assets/architecture_diagram.png" alt="BandOps Architecture" width="600">
+</div>
+
+---
+
+## 🤖 Meet the Agents
+Our war room is staffed by six specialized AI experts, all communicating via the Band mesh:
+
+1. 🛠 **Line Mechanic Agent (`@mechanic`)**: Diagnoses aircraft faults and identifies required parts based on the Minimum Equipment List (MEL).
+2. 📦 **Supply Chain Agent (`@logistics`)**: Manages global inventory, locates replacement parts, and calculates shipping timelines.
+3. ✈️ **Flight Ops Agent (`@dispatcher`)**: Evaluates delay impacts, passenger compensation thresholds, and proposes aircraft swaps.
+4. ⚖️ **FAA Compliance Agent (`@compliance`)**: Audits operational decisions against strict FAA safety regulations. (Adversarial auditor).
+5. 🧑‍✈️ **Crew Scheduler Agent (`@crew-scheduler`)**: Locates reserve crews and verifies legal duty times.
+6. 🎖 **AOG Commander (`@commander`)**: Orchestrates the room, balances competing priorities, and writes the final resolution to the immutable ledger.
+
+---
+
+## 🌀 Chaos Injection & Human Oversight
+Real life isn't perfectly predictable. BandOps features **Chaos Injection**—simulating mid-crisis events like severe weather or sudden supply chain shortages. The agents must adapt in real-time, proving the resilience of the Band multi-agent mesh.
+
+**Human-in-the-loop:** The AI recommends, but **Humans decide**. The AOG Commander synthesizes the agents' debate and presents it to the human operator for final approval, writing the result to an immutable audit trail.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.11+
+- Node.js 18+
+- [Band AI Account](https://app.band.ai) (Create 6 Remote Agents and get their API Keys)
+
+### Quick Run
+
 ```bash
-./run.sh
+# 1. Clone the repository
+git clone https://github.com/your-username/BandOps.git
+cd BandOps
+
+# 2. Setup Backend
+cd backend
+# Create your .env file with the Band API Keys
+cp .env.example .env 
+uv pip install -r requirements.txt
+fastapi dev main.py
+
+# 3. Setup Frontend
+cd ../frontend
+npm install
+npm run dev
 ```
-Then open `http://localhost:5175`. You will be greeted by a stunning Command Room UI. Click the trigger to watch the swarm orchestrate a live crisis resolution.
+
+Visit `http://localhost:5173` to enter the War Room.
+
+---
+
+## 🌍 Beyond Aviation
+While we built BandOps for aviation, the underlying architecture—**Secure Multi-Agent Collaboration via Band**—is immediately applicable to:
+- 🏥 **Hospitals:** ER triage and resource allocation.
+- ⚡ **Energy Grid:** Load balancing and disaster response.
+- 🏭 **Manufacturing:** Supply chain disruption recovery.
+
+---
+
+## 🏆 Hackathon Alignment
+BandOps strictly adheres to the core requirement of the **Band of Agents Hackathon**:
+- **3+ Agents:** We use 6 specialized agents.
+- **Meaningful Band Usage:** Band is the *actual collaboration layer*. Agents do not just use it for final output; they debate, share context, and coordinate state *through* the Band mesh.
+- **Enterprise Grade:** Built for highly regulated, high-stakes enterprise use cases.
+
+---
+
+<div align="center">
+  <i>Built with ❤️ for the Band of Agents Hackathon.</i>
+</div>
